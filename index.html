@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- boostrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <!--sidebar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <link rel='stylesheet' type="text/css" href='style.css' media="screen" />
+
+
+</head>
+
+<body>
+    <!-- sidebar-->
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()"> &times;</button>
+        <a href="#ALL ITEMS" class="w3-bar-item w3-button">ALL ITEMS</a>
+        <a href="#JACKETS" class="w3-bar-item w3-button">JACKETS</a>
+        <a href="#TROUSERS" class="w3-bar-item w3-button">TROUSERS</a>
+        <a href="#SHOES" class="w3-bar-item w3-button">SHOES</a>
+    </div>
+
+
+    <form class="dropdown-menu p-4">
+        <div class="mb-3">
+            <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+        </div>
+        <div class="mb-3">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                <label class="form-check-label" for="dropdownCheck2">
+                    Remember me
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+
+
+    <div id="main">
+        <!--COLOR OF BAR-->
+        <div class="topmenu w3-black">
+
+            <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+
+
+            <!--login-->
+            <div class="btn-group">
+                <button id="login" class="btn btn-secondary btn-sm dropdown-toggle w3-white" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Login
+                </button>
+
+                <div class="dropdown-menu">
+                    <form class="px-4 py-3">
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail1"
+                                placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                <label class="form-check-label" for="dropdownCheck">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Sign in</button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">New around here? Sign up</a>
+                    <a class="dropdown-item" href="#">Forgot password?</a>
+                </div>
+                <!--login-->
+            </div>
+        </div>
+        <!--sidebar -->
+
+
+
+
+        <div class="container1">
+            <img src="imgs/background.jpeg" alt="Snow" style="width:100%;">
+
+            <div class="centered">
+                <h1 style="font-size:50px">
+                    LOUIS'S STORE®
+                </h1>
+            </div>
+        </div>
+
+        <pre>
+
+
+
+
+
+
+
+    </pre>
+
+
+        <h2 class='title' id='ALL ITEMS'>ALL ITEMS</h2>
+
+        <!--Carousel-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imgs/1.jpeg" class="d-block w-100" alt="..." style="width:250px;height:800px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="imgs/2.jpeg" class="d-block w-100" alt="..." style="width:250px;height:800px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="imgs/3.jpeg" class="d-block w-100" alt="..." style="width:250px;height:800px;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <pre>
+
+
+
+
+
+
+
+        </pre>
+
+        <h3 id='JACKETS'>JACKETS</h3>
+        <div class="row">
+            <div class="column">
+                <img src="imgs/jacket/1.jpeg" style="width:100%; height:415px;">
+            </div>
+            <div class="column">
+                <img src="imgs/jacket/2.jpeg" style="width:100%; height:415px;">
+            </div>
+            <div class="column">
+                <img src="imgs/jacket/3.jpeg" style="width:100%; height:415px;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="imgs/jacket/4.jpeg" style="width:100%; height:415px;">
+            </div>
+            <div class="column">
+                <img src="imgs/jacket/5.jpeg" style="width:100%; height:415px;">
+            </div>
+            <div class="column">
+                <img src="imgs/jacket/6.jpeg" style="width:100%; height:415px;">
+            </div>
+        </div>
+
+        <pre>
+
+
+
+
+
+
+
+        </pre>
+
+        <h4 id='TROUSERS'>TROUSERS</h4>
+        <div class="row">
+            <div class="column">
+                <img src="imgs/jeans/1.jpeg" style="width:100%; height:415px;">
+            </div>
+            <div class="column">
+                <img src="imgs/jeans/2.jpeg" style="width:100%; height:415px;">
+            </div>
+            <div class="column">
+                <img src="imgs/jeans/3.jpeg" style="width:100%; height:415px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="imgs/jeans/4.jpeg" style="width:100%; height:415px;">
+            </div>
+            <div class="column">
+                <img src="imgs/jeans/5.jpeg" style="width:100%; height:415px;">
+            </div>
+            <div class="column">
+                <img src="imgs/jeans/6.jpeg" style="width:100%; height:415px;">
+            </div>
+        </div>
+
+        <pre>
+
+
+
+
+
+
+
+        </pre>
+
+        <h5 id='SHOES'>SHOES</h5>
+        <div class=" row">
+            <div class="column">
+                <img src="imgs/shoes/1.jpeg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="imgs/shoes/2.jpeg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="imgs/shoes/3.jpeg" style="width:100%">
+            </div>
+        </div>
+
+
+
+        <pre>
+
+
+
+
+
+
+
+        </pre>
+
+        <h6>MOVIE</h6>
+        <video width="100%" controls>
+            <source src="video/1.mp4" type="video/mp4">
+
+        </video>
+
+        <pre>
+
+
+
+
+
+
+
+        </pre>
+
+
+        <div class="container2">
+            <img src="imgs/7.jpeg" alt="Notebook" style="width:100%;">
+            <div class="content">
+                <h1 class="shopnow">SHOP NOW</h1>
+
+            </div>
+        </div>
+
+
+        <!-- boostrap CDN-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+
+
+        <!--sidebar-->
+        <script>
+            function w3_open() {
+                document.getElementById("main").style.marginLeft = "25%";
+                document.getElementById("mySidebar").style.width = "25%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+            }
+            function w3_close() {
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+            }
+        </script>
+
+</body>
+
+</html>
