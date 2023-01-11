@@ -1,0 +1,369 @@
+h2.title{
+    text-align: center;
+    font-size: 5vw;
+    color:black;
+} 
+
+/* style of Carousel */
+#carouselExampleIndicators{
+  margin-bottom: 20vw;
+}
+.d-block.w-100{
+  width:250px;
+  height:61.8vw
+}
+
+
+#JACKETS{
+  font-size: 5vw;
+  color:black;
+}
+
+#TROUSERS{
+  font-size: 5vw;
+  color:black;
+}
+
+#SHOES{
+  font-size: 5vw;
+  color:black;
+}
+
+#MOVIE{
+  text-align: center;
+  font-size: 5vw;
+  color:black;
+}
+
+
+.cover-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 20vw;
+  }
+  
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* shop now */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    font-size: 17px;
+  }
+  
+  .bottom-container {
+    position: relative;
+    /* max-width: 800px; */
+    margin: 0 auto;
+  }
+  
+  .bottom-container img {vertical-align: middle;}
+  
+  .bottom-container .content {
+    position: absolute;
+    bottom:0;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1.shopnow{
+   margin-bottom: 0;
+   text-align: center;
+   font-size: 5vw;
+   padding-top: 4vw;
+   padding-bottom: 4vw;
+  }
+
+
+
+/* -----------------------------top bar----------------- */
+
+/* fix top menu */
+div.topmenu.w3-black{
+  width: 100%; 
+  position: fixed;
+  z-index: 1;
+}
+
+
+#login{
+    color:black;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    text-align: center;
+    float: left; 
+    /* use vm unit to avoid text too long for phone */
+    font-size: 1.5vw;
+    color: white;
+    padding: 16px 2vw ;
+    text-decoration: none;
+}
+
+
+div.btn-group{
+    position:relative;
+    height: 20;
+    right: 100;
+}
+
+
+/* dropbar */
+.topmenu {
+  /* overflow: hidden; */
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* style of the button of side bar */
+#openNav{
+  /* padding: 6px 2vw ; */
+  padding-top:1vw;
+  padding-bottom: 10px;
+}
+
+
+/* style of top bar"Home" and "News" */
+.topmenu a {
+  float: left;
+  /* use vm unit to avoid text too long for phone */
+  font-size: 1.5vw;
+  color: white;
+  text-align: center;
+  padding: 16px 2vw ;
+  text-decoration: none;
+}
+
+.dropdown1 {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown1 .dropbtn {
+  border: none;
+  outline: none;
+  color: white;
+  padding: 16px 2vw;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+
+/* Clothing text on the top bar */
+#Clothing{
+  font-size: 1.5vw;
+}
+
+
+/* ----------------------- style of top drop bar -------------------------*/
+.column a{
+  font-size:1vw
+}
+
+.column h3{
+  font-size:3vw;
+  color:white;
+  padding-left: 1.5vw;
+}
+
+.header h2{
+  text-align: center;
+  font-size:6vw; 
+}
+
+
+
+.topmenu a:hover,
+.dropdown1:hover .dropbtn {
+  background-color: gray;
+}
+
+.dropdown1-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown1-content .header {
+  background:black;
+  color: white;
+}
+
+.dropdown1:hover .dropdown1-content {
+  display: block;
+}
+
+
+
+.column a {
+  float: none;
+  color: white;
+  /* padding: 16px; */
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #ddd;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+      width: 100%;
+      height: auto;
+
+  }
+}
+
+/* -------------------------------------------- */
+
+/* product card text style */
+p.card-text{
+  height: 100px;
+  overflow: auto;
+}
+
+
+/* -------------------- product card display --------------------*/
+.col-12.col-sm-8.col-md-6.col-lg-4
+{
+width:auto;
+}
+
+.containerProduct{
+  color: black;
+}
+
+/* the title of product */
+.card-title{
+  font-size: 2.5vw;
+  height: 6vw;
+  overflow: auto;
+}
+
+/* the style of product */
+h6.card-subtitle.mb-2.text-muted{
+  font-size: 1.5vw;
+  height: 3vw;
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* the describe of product */
+.card-text{
+  font-size: 1vw;
+}
+
+/* prize of product */
+.mt-4{
+  color:black;
+  font-size: 2.5vw
+}
+
+.custom-select.ml-1{
+  height:auto;
+  width: 30vw;
+  font-size: 2vw;
+  
+}
+
+
+
+/* -------------- Create three equal columns that floats next to each other -------------- */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.row{
+  margin-bottom: 61.8vw;
+}
+
+
+/* -------------------------------------------- */
+/* style of shop feed */
+#coords{
+  height: 100vh;
+}
+#shopFeedBox{
+  position:fixed;
+  right: 10px;
+  top:50%;
+  z-index: 1;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  color: black;
+}
+
+
+
+/* image of the store cover */
+#store-cover{
+  width:100%;
+  margin-top: 4vw;
+}
+
+
+/* size of shop-now image */
+#shopnowImg{
+  width:100%;
+  height:61.8vw
+}
+
+/* name of store */
+.centered h1{
+  font-size:9vw
+}
+
+/* the size of movie */
+#movie-container{
+  margin-bottom: 20vw;
+}
+
+/* style of footer */
+footer.text-center.text-white{
+  background-color:black;
+  padding-top: 1.5vw;
+}
+
+footer a{
+  color: white
+}
+
+div.text-center.text-light.p-3{
+  background-color: rgba(0, 0, 0, 0.2)
+}

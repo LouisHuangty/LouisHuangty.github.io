@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- adjust for phone, create a viewport for users to see different parts of the web by panning and zooming -->
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+
+
+    <!-- boostrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <!--sidebar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <!-- ------------------ -->
+    <!-- Shopping Cart -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+
+    <!--Shopping Cart style-->
+    <link rel="stylesheet" href="css/cart.css">
+
+    <!-- product card style -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+    <!-- ------------------ -->
+
+
+    <!-- footer -->
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet" />
+    <!-- ------------------ -->
+
+
+    <link rel='stylesheet' type="text/css" href='css/style.css' media="screen" />
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <!-- shop feed (Salute to Off-white official website: https://www.off---white.com/, respect to Virgil Abloh's work and his death) -->
+    <!-- "coords" is a full screen div to get the mouse position -->
+    <div id="coords">
+
+        <div id="shopFeedBox">
+            <a>SHOP FEED</a>
+            <div id="TIME"></div>
+            <div id="coord"></div>
+            <a>\</a>
+
+        </div>
+        <!-- ------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+        <!-- sidebar-->
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()"> &times;</button>
+            <a href="#ALL ITEMS" class="w3-bar-item w3-button">ALL ITEMS</a>
+            <a href="#JACKETS" class="w3-bar-item w3-button">JACKETS</a>
+            <a href="#TROUSERS" class="w3-bar-item w3-button">TROUSERS</a>
+            <a href="#SHOES" class="w3-bar-item w3-button">SHOES</a>
+        </div>
+
+
+
+        <!-- main body of side bar, it doesnot have the </div> beacuse its height is full screen -->
+        <div id="main">
+            <!--COLOR OF TOPBAR-->
+            <div class="topmenu w3-black">
+                <!-- the bottom to open the sidebar -->
+                <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()"
+                    style="float: left">&#9776;</button>
+
+
+
+
+                <a href="index.html">Home</a>
+                <a href="news.html">News</a>
+
+
+
+                <!-- the dropdown bar on the top of the website, to show different information of clothes -->
+                <div class="dropdown1">
+                    <button id="Clothing" class="dropbtn">
+                        Clothing
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown1-content">
+                        <div class="header">
+                            <h2>Menu</h2>
+                        </div>
+                        <div class="top-row">
+                            <div class="column">
+                                <h3> Jackets</h3>
+                                <a href="#JACKETS">INCUBATE / COTTON. WEATHER</a>
+                                <a href="#JACKETS">WSFM / JACKET / NYCO. WEATHER</a>
+                                <a href="#JACKETS">INCOM / JACKET / NYCO. WEATHER</a>
+                            </div>
+
+                            <div class="column">
+                                <h3>Trousers</h3>
+                                <a href="#TROUSERS">Army Cargo Pant in Dark Green</a>
+                                <a href="#TROUSERS">Factory Dungarees in Indigo Denim</a>
+                                <a href="#TROUSERS">Naval Dungaree in Indigo Denim</a>
+                            </div>
+                            <div class="column">
+                                <h3>Shoes</h3>
+                                <a href="#SHOES">CHUKKA BOOTS 3141</a>
+                                <a href="#SHOES">CLASSIC MOC TOE BOOTS 1907</a>
+                                <a href="#SHOES">IRON RANGER BOOTS 8111</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!--login-->
+                <div class="btn-group" style="float:right;">
+
+                    <button id="login" class="btn btn-sm dropdown-toggle w3-black" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Login
+                    </button>
+
+
+                    <div class="dropdown-menu">
+                        <form class="px-4 py-3">
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1"
+                                    placeholder="email@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                    <label class="form-check-label" for="dropdownCheck">
+                                        Remember me
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Sign in</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a1 class="dropdown-item" href="#">New around here? Sign up</a1>
+                        <a2 class="dropdown-item" href="#">Forgot password?</a2>
+                    </div>
+                    <!--login-->
+                </div>
+            </div>
+            <!--sidebar -->
+
+
+
+            <!-- store's name and background -->
+            <!-- container tap label has contradiction with bootstrap franework, so I change it to such as "cover-container" and "containerProduct", it is not a perfect idea, but it works -->
+            <div class="cover-container">
+                <img id="store-cover" src="imgs/background.jpeg">
+
+                <div class="centered">
+                    <h1>
+                        LOUIS'S STORE
+                    </h1>
+                </div>
+            </div>
+
+
+            <h2 class='title' id='ALL ITEMS'>ALL ITEMS</h2>
+
+
+            <!--Carousel-->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imgs/1.jpeg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgs/2.jpeg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgs/3.jpeg" class="d-block w-100">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+            <!---------------------------------------- Product details ---------------------------------------->
+            <!---------------------------------------- Jackets ---------------------------------------->
+
+            <h3 id='JACKETS'>JACKETS</h3>
+
+            <!-- Three items per line -->
+            <div class="row">
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/jacket/1.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">INCUBATE / JACKET / COTTON. WEATHER</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: 212WVDT-JKM04</h6>
+                                <p class="card-text">
+                                    Pullover jacket constructed of high-density cotton fabric. Features gusseted flap
+                                    pockets on the front. High collar hood mimics a storm guard. Relaxed silhouette.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£320</h5>
+                                    </div>
+                                    <a href="#0" id="p1" class="cd-add-to-cart" data-price="320">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/jacket/2.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">WSFM / JACKET / NYCO. WEATHER</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: 212WVDT-JKM05</h6>
+                                <p class="card-text">
+                                    High density cotton/ nylon blend Modified M-65 jacket. Recycled material lining with
+                                    original onion stitch quilting. Features symmetrical vertical and flap pockets.
+                                    Embroidered motif at front.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£480</h5>
+                                    </div>
+                                    <a href="#0" id="p2" class="cd-add-to-cart" data-price="480">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/jacket/3.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">INCOM / JACKET / NYCO. WEATHER</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: 212WVDT-JKM03</h6>
+                                <p class="card-text">
+                                    Jacket constructed with cotton/ nylon blend fabric. Features stand collar and
+                                    external hood. Recycled taffeta lining. Raglan sleeves and loose armholes.
+                                    Embroidered wtvua motif on front.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£315</h5>
+                                    </div>
+                                    <a href="#0" id="p3" class="cd-add-to-cart" data-price="315">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="row">
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card" style="width: 100%;">
+                            <img class="card-img" src="imgs/jacket/4.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">EVASION / JACKET / NYLON. 3LAYER</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: 212BRDT-JKM08</h6>
+                                <p class="card-text">
+                                    Mountain parka constructed of a 3-layer fabric. Five tactical pockets inside of each
+                                    chest pockets. High neck hood with laser etched storm guard.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£655</h5>
+                                    </div>
+                                    <a href="#0" id="p4" class="cd-add-to-cart" data-price="655">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/jacket/5.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">BLANK 01 / HOODED / COTTON</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: 212ATDT-CSM05</h6>
+                                <p class="card-text">
+                                    Recycled cotton terry pullover hoodie. Material from reclaimed yarn waste.
+                                    Loose-fitting silhouette. Wide armholes.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£200</h5>
+                                    </div>
+                                    <a href="#0" id="p5" class="cd-add-to-cart" data-price="200">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/jacket/6.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">TRADER / VEST / COTTON. RIPSTOP</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: 212BRDT-JKM07</h6>
+                                <p class="card-text">
+                                    Vest featuring antique style high-density cotton fabric on right, ripstop on left.
+                                    Four flap pockets on front. Zip pocket on right front.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">S</option>
+                                        <option value="2">M</option>
+                                        <option value="3">L</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£327</h5>
+                                    </div>
+                                    <a href="#0" id="p6" class="cd-add-to-cart" data-price="327">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- ---------------------------------------- Trousers ---------------------------------------- -->
+
+
+
+            <h4 id='TROUSERS'>TROUSERS</h4>
+
+            <!-- Three items per line -->
+            <div class="row">
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/jeans/1.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Army Cargo Pant in Dark Green</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: CARGO PANT COTTON 191-DGRN</h6>
+                                <p class="card-text">
+                                    The Army Cargo Pant in Dark Green are based on a US military 1950s cargo pant with
+                                    additional pocket details. They feature ties on the pant that would have been used
+                                    to carry soldiers' equipment. </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">32</option>
+                                        <option value="2">38</option>
+                                        <option value="3">40</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£260</h5>
+                                    </div>
+                                    <a href="#0" id="p7" class="cd-add-to-cart" data-price="260">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/jeans/2.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Factory Dungarees in Indigo Denim</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: NCOS-P-51 FACTORY DUNGAREE INDIGO</h6>
+                                <p class="card-text">
+                                    It has three reinforced mitred patch pockets, a hidden coin pocket and an internal
+                                    chest pocket. The multiple metal clip fastenings used for use in colder weather
+                                    conditions.</p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">44</option>
+                                        <option value="2">46</option>
+                                        <option value="3">48</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£399</h5>
+                                    </div>
+                                    <a href="#0" id="p8" class="cd-add-to-cart" data-price="399">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/jeans/3.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">Naval Dungaree in Indigo Denim</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Style: NCOS-P-51 NAVAL DUNGAREE INDIGO</h6>
+                                <p class="card-text">
+                                    The Naval Dungaree in Indigo Denim is influenced by the loose-fitting
+                                    'deck-bibs'. There is a zip closure map pocket on the chest bib, a small pen pocket
+                                    to the side and two sizable press-stud patch pockets on the legs.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">44</option>
+                                        <option value="2">46</option>
+                                        <option value="3">48</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£499</h5>
+                                    </div>
+                                    <a href="#0" id="p9" class="cd-add-to-cart" data-price="499">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!---------------------------------------- Shoes ---------------------------------------- -->
+
+
+            <h5 id='SHOES'>SHOES</h5>
+
+
+
+            <div class="row">
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/shoes/1.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">CHUKKA BOOTS 3141</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Leather type: Briar Oil Slick Leather</h6>
+                                <p class="card-text">
+                                    First manufactured in the 1950's. The
+                                    Red Wing 3141 Chukka boot comes with a durable polyurethane outsole. Made in the
+                                    USA.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">41</option>
+                                        <option value="2">42</option>
+                                        <option value="3">43</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£259</h5>
+                                    </div>
+                                    <a href="#0" id="p10" class="cd-add-to-cart" data-price="259">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/shoes/2.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">CLASSIC MOC TOE BOOTS 1907</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Leather type: Copper Rough & Tough
+                                </h6>
+                                <p class="card-text">
+                                    The 1907 is made from our Copper Rough & Tough Leather. This supple, yet tough
+                                    leather will allow added flexibility and comfort.
+                                    Made in the USA.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">41</option>
+                                        <option value="2">42</option>
+                                        <option value="3">43</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£309</h5>
+                                    </div>
+                                    <a href="#0" id="p11" class="cd-add-to-cart" data-price="309">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+                <div class="column">
+                    <!-- ---------------------------------------product card------------------------------------------------------- -->
+                    <div class="containerProduct">
+
+                        <div class="card">
+                            <img class="card-img" src="imgs/shoes/3.jpeg" alt="Vans">
+
+                            <div class="card-body">
+                                <h4 class="card-title">IRON RANGER BOOTS 8111</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Leather type: Amber Harness Leather</h6>
+                                <p class="card-text">
+                                    The 8111 is smart, durable and long-lasting, this boot will be your new friend for
+                                    life. The Iron Ranger boots were designed with a double
+                                    leather toe-cap. Made in the USA.
+                                </p>
+                                <div class="options d-flex flex-fill">
+                                    <select class="custom-select ml-1">
+                                        <option selected>Size</option>
+                                        <option value="1">41</option>
+                                        <option value="2">42</option>
+                                        <option value="3">43</option>
+                                    </select>
+                                </div>
+                                <div class="buy d-flex justify-content-between align-items-center">
+                                    <div class="price text-success">
+                                        <h5 class="mt-4">£299</h5>
+                                    </div>
+                                    <a href="#0" id="p12" class="cd-add-to-cart" data-price="299">ADD TO CART</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------------------- -->
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Shopping Cart -->
+            <div class="cd-cart-container empty">
+                <a href="#0" class="cd-cart-trigger">
+                    <ul class="count">
+                        <!-- cart items count -->
+                        <li>0</li>
+                        <li>0</li>
+                    </ul> <!-- .count -->
+                </a>
+
+                <div class="cd-cart">
+                    <div class="wrapper">
+                        <header>
+                            <h2>Cart</h2>
+                            <span class="undo">Item removed. <a href="#0">Undo</a></span>
+                        </header>
+
+                        <div class="body">
+                            <ul>
+                                <!-- products added to the cart will be inserted here using JavaScript -->
+                            </ul>
+                        </div>
+
+                        <footer>
+                            <a href="#0" class="checkout btn"><em>Checkout - £<span>0</span></em></a>
+                        </footer>
+                    </div>
+                </div> <!-- .cd-cart -->
+            </div> <!-- cd-cart-container -->
+
+
+
+
+
+
+
+            <div id="movie-container">
+                <h6 id="MOVIE">MOVIE</h6>
+                <video id="movie-media" width="100%" controls>
+                    <source src="video/1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div class="bottom-container">
+                <img id="shopnowImg" src="imgs/7.jpeg" alt="Notebook">
+                <div class="content">
+                    <h1 class="shopnow">SHOP NOW</h1>
+                </div>
+            </div>
+
+            <!-- footer of the website -->
+            <footer class="text-center text-white">
+
+                <a href="">Shopping guide |</a>
+                <a href="">Terms & Conditions |</a>
+                <a href="">Privacy policy |</a>
+                <a href="">Customer Service</a>
+
+                <!-- Grid container -->
+                <div class="container pt-4">
+                    <!-- Section: Social media -->
+                    <section class="mb-4">
+                        <!-- Facebook -->
+                        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button"
+                            data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                    </section>
+                    <!-- Section: Social media -->
+                </div>
+                <!-- Grid container -->
+
+                <!-- Copyright -->
+                <div class="text-center text-light p-3">
+                    LOUIS STORE VISUALUPARMORED<br />
+
+                    <a class="text-light" href="">Copyright Louis Store, LTD. ALL RIGHTS RESERVED.</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+
+
+
+            <!-- ---------------------------------------- Point to an external JavaScript file---------------------------------------- -->
+
+            <!-- boostrap CDN-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+
+
+            <!--sidebar-->
+            <script>
+                function w3_open() {
+                    document.getElementById("main").style.marginLeft = "25%";
+                    document.getElementById("mySidebar").style.width = "25%";
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("openNav").style.display = 'none';
+                }
+                function w3_close() {
+                    document.getElementById("main").style.marginLeft = "0%";
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("openNav").style.display = "inline-block";
+                }
+            </script>
+
+
+            <!-- footer -->
+            <!-- MDB -->
+            <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js"></script>
+            <!-- -------------------- -->
+
+
+            <!-- JS for shopping cart -->
+            <script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+            <script src="js/cart.js"></script>
+            <!-- -------------------- -->
+
+
+            <!-- JS for shopfeed -->
+            <script src="js/time.js"></script>
+            <script src="js/position.js"></script>
+
+            <!-- -------------------------------------------------------------------------------- -->
+
+
+</body>
+
+</html>
+
+
+<!-- --------------------------------------------------Reference---------------------------------------- -->
+<!-- W3schools.com. 2021. W3.CSS Sidebar. [online] Available at: <https://www.w3schools.com/w3css/w3css_sidebar.asp>.
+W3schools.com. 2021. How To Create a Top Navigation Bar. [online] Available at: <https://www.w3schools.com/howto/howto_js_topnav.asp>.
+Getbootstrap.com. 2021. Carousel. [online] Available at: <https://getbootstrap.com/docs/5.1/components/carousel/>.
+MDB - Material Design for Bootstrap. 2021. Bootstrap Footer - examples & tutorial. [online] Available at: <https://mdbootstrap.com/docs/standard/navigation/footer/>. -->
+<!-- -------------------------------------------------------------------------------- -->
